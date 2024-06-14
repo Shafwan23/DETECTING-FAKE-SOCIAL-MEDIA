@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings</title>
+    <link rel="icon" type="image/x-icon" href="./images/settings.png" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fafafa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        max-width: 800px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        overflow-y: auto;
+        .profile {
+          margin-bottom: 40px;
+        }
+        .profile img {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          border: 4px solid #fff;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease-in-out;
+        }
+        .profile img:hover {
+          transform: scale(1.05);
+        }
+        h1 {
+          font-size: 32px;
+          margin-bottom: 20px;
+          color: #333;
+        }
+        h2 {
+          font-size: 24px;
+          margin-bottom: 10px;
+          color: #444;
+        }
+        p {
+          color: #777;
+        }
+        ul {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          column-count: 2;
+          column-gap: 20px;
+        }
+        li {
+          margin-bottom: 20px;
+        }
+        .settings-button {
+          width: 100%;
+          padding: 12px 24px;
+          background-color: transparent;
+          color: #333;
+          border: 2px solid #333;
+          border-radius: 12px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        .settings-button:hover {
+          background-color: #333;
+          color: #fff;
+        }
+        .settings-button i {
+          margin-right: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="profile">
+        <img src="./images/zaynmalik.jpg" alt="Profile Picture" />
+        <h2>Zayn Malik</h2>
+        <p>Settings</p>
+      </div>
+      <ul>
+        <li>
+          <button class="settings-button">
+            <i class="fas fa-user"></i>Edit Profile
+          </button>
+        </li>
+        <li>
+          <button class="settings-button">
+            <i class="fas fa-bell"></i>Notifications
+          </button>
+        </li>
+        <li>
+          <button class="settings-button">
+            <i class="fas fa-volume-mute"></i>Muted Accounts
+          </button>
+        </li>
+        <li>
+          <button class="settings-button">
+            <i class="fas fa-thumbs-up"></i>Like and Share Counts
+          </button>
+        </li>
+        <li>
+          <button class="settings-button" onclick="openSettingsPage()">
+            <i class="fas fa-key"></i>Authentication
+          </button>
+        </li>
+        <li>
+          <button class="settings-button">
+            <i class="fas fa-user-friends"></i>Close Friends
+          </button>
+        </li>
+        <li>
+          <button class="settings-button">
+            <i class="fas fa-ban"></i>Blocked
+          </button>
+        </li>
+        <li>
+          <button class="settings-button">
+            <i class="fas fa-info-circle"></i>Account Status
+          </button>
+        </li>
+      </ul>
+    </div>
+    <script>
+      function openSettingsPage() {
+        // Define the URL of the external link
+        var localLink = "verification.html";
+
+        // Open the link in a new tab/window
+        window.open(localLink, "_blank");
+      }
+    </script>
+  </body>
+</html>
